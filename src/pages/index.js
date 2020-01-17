@@ -16,9 +16,6 @@ const IndexPage = () => (
         <li>Dog friendly</li>
       </ul>
       <p>Hope this list helps.</p>
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div> */}
       <Link to="/breweries">Check out the breweries.</Link>
     </div>
   </Layout>
