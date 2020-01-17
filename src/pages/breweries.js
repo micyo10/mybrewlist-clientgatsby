@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BreweryList from '../components/breweryList';
 
-
-
 class BreweriesPage extends Component {
 
   // add state, a JS object
@@ -135,13 +133,7 @@ class BreweriesPage extends Component {
     ]
   }
 
-
-
   render() {
-
-
-    let finalBreweryList;
-
     return (
       <Layout>
       <SEO title="Breweries" />
