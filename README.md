@@ -1,3 +1,9 @@
+Check out the project here:
+
+client: https://trusting-noether-6e12c2.netlify.com/
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
