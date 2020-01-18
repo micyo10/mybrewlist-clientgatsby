@@ -691,6 +691,4 @@ h1 {
   opacity: .5;
   transition: none;
 }
-.filters button:hover{background:#00baed;border:2px gray solid;}
 .filters button.active{background:#00baed;border:2px gray solid;opacity: 1;}
-.filters button.active:hover{opacity: .5;}
