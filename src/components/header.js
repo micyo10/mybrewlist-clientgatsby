@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ fontSize: '70px', margin: '30px 0 0' }}>
         <Link
           to="/"
           style={{
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <br />
-      <p>Find dog friendly breweries</p>
+      <p style={{ fontSize: '30px', fontWeight:'600'}}>Find dog friendly breweries</p>
     </div>
   </header>
 )

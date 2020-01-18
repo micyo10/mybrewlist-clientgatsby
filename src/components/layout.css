@@ -646,9 +646,13 @@ color palette 3
 
 */
 body {
-  color:#515151;
-  font-family:Arial,Helvetica,sans-serif;
+  color:#000;
+  /* font-family:Arial,Helvetica,sans-serif; */
+  font-family: 'Source Sans Pro',Arial,Helvetica,sans-serif;
+  font-size: 20px;
 }
+
+body * {transition: .5s;}
 
 a {
   color:#00baed ;
@@ -660,10 +664,9 @@ a:hover {
 
 #main-menu a[aria-current="page"] {
   color:#00baed;
-  text-decoration:underline;
 }
-#main-menu a{color:#fff;}
-#main-menu a:hover{color:#00baed;}
+#main-menu a{color:#fff;transition: none;}
+#main-menu a:hover{color:#00baed;text-decoration:underline;}
 
 main > div {
   border-radius:7px;
@@ -671,4 +674,23 @@ main > div {
 
 h1 {
   color:#00baed;
+  font-family: 'Roboto Condensed';
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+
+
+
+/* filters */
+.filters button{
+  background: #dedede;
+  border:2px solid #ccc;
+  color:#000;
+  cursor: pointer;
+  line-height: 1.7;
+  opacity: .5;
+  transition: none;
+}
+.filters button:hover{background:#00baed;border:2px gray solid;}
+.filters button.active{background:#00baed;border:2px gray solid;opacity: 1;}
+.filters button.active:hover{opacity: .5;}

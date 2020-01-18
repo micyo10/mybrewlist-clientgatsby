@@ -25,22 +25,23 @@ class BreweryList extends Component {
 
     // declare final list variable
     let finalList;
-    let buttonText;
+    let buttonClass;
     const isListDogFriendly = this.state.isListDogFriendly;
 
     if(isListDogFriendly) {
       finalList = dogFriendly;
-      buttonText = 'Display all breweries';
+      buttonClass = 'active';
     } else {
       finalList = breweriesList;
-      buttonText = 'Display only dog friendly breweries';
+      buttonClass = '';
     }
 
     return (
       <div>
-        <div className="filters" style={{display:'flex',justifyContent:'flex-start'}}>
-          <button onClick={this.listDogFriendly}>
-            {buttonText}
+        Filters:
+        <div className="filters" style={{display:'flex',justifyContent:'flex-start',margin:'10px 0 30px'}}>
+          <button onClick={this.listDogFriendly} className={buttonClass}>
+            Dog Friendly
           </button>
         </div>
 

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `My Brew List`,
     description: `A list of local breweries in Western MA and CT. Visited by yours truly.`,
-    author: `@gatsbyjs`,
+    author: `@mikeyodev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/react-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

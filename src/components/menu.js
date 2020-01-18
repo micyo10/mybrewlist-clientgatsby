@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const Menu = () => (
   <div style={{
     background: '#222',
-    marginBottom: `1.45rem`,
+    marginBottom: `40px`,
     paddingTop: '10px'
   }}
   id="main-menu">

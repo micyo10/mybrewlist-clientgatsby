@@ -68,7 +68,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro:300&display=swap" rel="stylesheet" />
+      <script src="https://kit.fontawesome.com/542af5f0c4.js" crossorigin="anonymous"></script>
+    </Helmet>
   )
 }
 
