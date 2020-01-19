@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 
 export class BreweryListItem extends Component {
 
-  render() {
+  constructor() {
+    super();
+    this.toggleHours = this.toggleHours.bind(this);
+    this.state = { hoursShowing: false };
+  }
 
+  toggleHours() {
+    this.setState(prevState => ({hoursShowing: !prevState.hoursShowing}));
+  }
+
+  render() {
     // brewery phone number stripped for telL link
     const telFull = this.props.brewery.phone;
-    const telLink = `tel:${telFull.replace(/\(|\)|\ |\-/g,'')}`
+    const telLink = `tel:${telFull.replace(/\(|\)| |-/g,'')}`
 
     // set some bullshit variables
     const dogFriendly = this.props.brewery.dogs;
@@ -14,14 +23,30 @@ export class BreweryListItem extends Component {
     let statusIcon;
     let itemColor;
 
-    if (dogFriendly == true) {
+    // styling for dog friendly vs non-dog friendly listing
+    if (dogFriendly === true) {
       dogFriendlyNotice = 'YES!';
-      statusIcon =  <i class="fas fa-paw"></i>;
+      statusIcon =  <i className="fas fa-paw"></i>;
       itemColor = 'green';
     } else {
       dogFriendlyNotice = 'Nope';
-      statusIcon = <i class="far fa-frown"></i>;
+      statusIcon = <i className="far fa-frown"></i>;
       itemColor = 'red';
+    }
+
+    // toggle displaying hours
+    const hoursShowing = this.state.hoursShowing;
+    let buttonText;
+    let hoursHeight;
+    let hoursOpacity;
+    if(hoursShowing) {
+      buttonText = 'Hide Hours'
+      hoursHeight = '100%';
+      hoursOpacity = 1;
+    } else {
+      buttonText = 'Display Hours'
+      hoursHeight = 0;
+      hoursOpacity = 0;
     }
 
     return (
@@ -36,6 +61,16 @@ export class BreweryListItem extends Component {
         <br />
         <br />
         <p>Dog friendly? <span style={{ color: itemColor }}>{dogFriendlyNotice}&nbsp;&nbsp;{statusIcon}</span></p>
+        <button onClick={this.toggleHours} style={{cursor: 'pointer', margin: '0 0 20px', textAlign: 'center', width: '150px' }}>{buttonText}</button>
+        <ul className='hours-list' style={{ height: hoursHeight, listStyle: 'circle inside', margin: 0, opacity: hoursOpacity }}>
+          <li>Sunday: { this.props.brewery.hours.Sunday }</li>
+          <li>Monday: { this.props.brewery.hours.Monday }</li>
+          <li>Tuesday: { this.props.brewery.hours.Tuesday }</li>
+          <li>Wednesday: { this.props.brewery.hours.Wednesday }</li>
+          <li>Thursday: { this.props.brewery.hours.Thursday }</li>
+          <li>Friday: { this.props.brewery.hours.Friday }</li>
+          <li>Saturday: { this.props.brewery.hours.Saturday }</li>
+        </ul>
       </div>
     );
   }

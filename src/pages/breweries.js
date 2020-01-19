@@ -196,7 +196,7 @@ class BreweriesPage extends Component {
         <h1>Breweries</h1>
         <BreweryList breweries={this.state.breweries} />
         <br />
-        <p>Go back <Link href="/">home</Link></p>
+        <p>Go back <Link to="/">home</Link></p>
       </Layout>
     )
   }

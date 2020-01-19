@@ -44,13 +44,11 @@ class BreweryList extends Component {
             Dog Friendly
           </button>
         </div>
-
         {
           finalList.map((brewery) => (
             <BreweryListItem key={brewery.id} brewery={ brewery }/>
           ))
         }
-
       </div>
     );
   }

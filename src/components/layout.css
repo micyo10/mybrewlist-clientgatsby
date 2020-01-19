@@ -692,3 +692,9 @@ h1 {
   transition: none;
 }
 .filters button.active{background:#00baed;border:2px gray solid;opacity: 1;}
+
+
+
+/* list items */
+.hours-list li{margin:0}
+
