@@ -37,14 +37,17 @@ export class BreweryListItem extends Component {
     // toggle displaying hours
     const hoursShowing = this.state.hoursShowing;
     let buttonText;
+    let display;
     let hoursHeight;
     let hoursOpacity;
     if(hoursShowing) {
-      buttonText = 'Hide Hours'
+      buttonText = 'Hide Hours';
+      display = 'block';
       hoursHeight = '100%';
       hoursOpacity = 1;
     } else {
-      buttonText = 'Display Hours'
+      buttonText = 'Display Hours';
+      display = 'none';
       hoursHeight = 0;
       hoursOpacity = 0;
     }
@@ -62,7 +65,7 @@ export class BreweryListItem extends Component {
         <br />
         <p>Dog friendly? <span style={{ color: itemColor }}>{dogFriendlyNotice}&nbsp;&nbsp;{statusIcon}</span></p>
         <button onClick={this.toggleHours} style={{cursor: 'pointer', margin: '0 0 20px', textAlign: 'center', width: '150px' }}>{buttonText}</button>
-        <ul className='hours-list' style={{ height: hoursHeight, listStyle: 'circle inside', margin: 0, opacity: hoursOpacity }}>
+        <ul className='hours-list' style={{ display: display, height: hoursHeight, listStyle: 'circle inside', margin: 0, opacity: hoursOpacity }}>
           <li>Sunday: { this.props.brewery.hours.Sunday }</li>
           <li>Monday: { this.props.brewery.hours.Monday }</li>
           <li>Tuesday: { this.props.brewery.hours.Tuesday }</li>
